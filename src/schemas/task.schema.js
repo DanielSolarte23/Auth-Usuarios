@@ -1,0 +1,11 @@
+import { date, z } from "zod";
+
+export const createTaskShema = z.object({
+    title: z.string({
+        required_error:'El titulo es requerido'
+    }),
+    description: z.string({
+        required_error: 'La descripcion es requerida'
+    }),
+    date: z.string().datetime().optional(),
+})
