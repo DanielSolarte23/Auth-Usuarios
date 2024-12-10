@@ -9,7 +9,7 @@ export default function NavBar() {
   console.log(user);
 
   return (
-    <nav className="flex justify-between py-5 px-10 h-[12%]  shadow-xl contain">
+    <nav className="flex justify-between py-5 px-10 h-[12%] w-full  shadow-xl contain fixed">
       <Link to={isAuthenticated ? "/tasks" : "/"}>
         <div className=" flex justify-center items-center w-20 h-full">
           <Logo className={`w-full`} />
@@ -20,7 +20,7 @@ export default function NavBar() {
           <>
             <li className="text-red-700 text-xl font-semibold flex items-center gap-2">Bienvenido {user.username}
               <div className="w-10 h-10 border-2 border-red-700 rounded-full">
-                <i class="fa-solid fa-user"></i>
+                <i className="fa-solid fa-user"></i>
               </div>
             </li>
 
